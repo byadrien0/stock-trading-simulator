@@ -1,134 +1,128 @@
-📈 Neumorphic Trading Simulator
+---
 
-Une application de simulation de trading immersive construite avec React + TailwindCSS + lucide-react.
-Elle permet de gérer un portefeuille fictif de 10 000€, d’investir dans différents instruments financiers (actions, cryptos, ETF, indices, matières premières, devises), et de suivre ses performances en temps réel avec des frais réalistes intégrés.
+# 📈 **Neumorphic Trading Simulator**
 
-🚀 Fonctionnalités principales
-💼 Gestion du portefeuille
+> *Une application de simulation de trading immersive et réaliste construite avec **React + TailwindCSS***
 
-Portefeuille de départ : 10 000€ en cash.
+---
 
-Suivi en temps réel de :
+## ✨ **Fonctionnalités principales**
 
-La valeur totale du portefeuille.
+### 💼 **Gestion du portefeuille**
 
-Le cash disponible.
+* Portefeuille initial : **10 000€ en cash** 🪙
+* Suivi en temps réel de :
 
-Le nombre de positions actives.
+  * 💰 Liquidités disponibles
+  * 📊 Nombre de positions actives
+  * 📈 Valeur totale du portefeuille
+  * 📉 Gains/pertes cumulés (en **€** et en **%**)
 
-Les gains/pertes cumulés (en € et en %).
+---
 
-🔍 Recherche & navigation
+### 🔍 **Recherche & Navigation**
 
-Onglet Accueil : aperçu du portefeuille, tendances du marché, accès rapide aux positions.
+* **Onglet Accueil 🏠** : aperçu du portefeuille + tendances du marché.
+* **Onglet Recherche 🔎** : moteur de recherche + filtres par catégories :
 
-Onglet Recherche : moteur de recherche par symbole ou nom + filtres par catégories :
+  * 🏦 Actions
+  * 🪙 Cryptos
+  * 📑 ETF
+  * 🏅 Matières premières
+  * 📊 Indices
+  * 💱 Forex
+* **Onglet Portfolio 📂** : statistiques détaillées + historique.
+* **Onglet Stats 📈** : (espace prévu pour extensions futures).
 
-Tout, Actions, Crypto, ETF, Matières, Indices, Devises.
+---
 
-Onglet Portfolio : vue détaillée des positions, statistiques et dernières transactions.
+### 📊 **Instruments financiers disponibles**
 
-Onglet Stats (placeholder pour extensions futures).
+✅ **Actions US & EU** : `AAPL`, `GOOGL`, `MSFT`, `TSLA`, `AMZN`, `NVDA`, `META`, `NFLX`, `ASML`, `SAP`, `LVMH`
+✅ **Cryptos** : `BTC`, `ETH`, `ADA`, `SOL`, `DOT`
+✅ **ETF** : `VOO`, `QQQ`, `VTI`, `VXUS`
+✅ **Matières premières** : `Gold`, `Silver`, `Oil`, `Copper`
+✅ **Indices** : `S&P 500`, `NASDAQ`, `DAX`, `CAC 40`
+✅ **Forex** : `EUR/USD`, `GBP/USD`, `USD/JPY`, `USD/CHF`
 
-📊 Instruments financiers simulés
+---
 
-Inclut un large éventail d’actifs :
+### 🎲 **Simulation réaliste**
 
-Actions US & EU : AAPL, GOOGL, MSFT, TSLA, AMZN, NVDA, META, NFLX, ASML, SAP, LVMH.
+* Les prix **se mettent à jour toutes les 3 secondes** ⏳
+* Volatilité adaptée :
 
-Cryptomonnaies : BTC, ETH, ADA, SOL, DOT.
+  * ⚡ Crypto : ±3%
+  * 🛢️ Matières : ±2%
+  * 💱 Forex : ±0.5%
+  * 📑 ETF & Actions : ±1.5%
+  * 📊 Indices : ±0.8%
 
-ETF : VOO, QQQ, VTI, VXUS.
+---
 
-Matières premières : Or, Argent, Pétrole, Cuivre.
+### 💶 **Système de frais réalistes**
 
-Indices : S&P 500, NASDAQ, DAX 40, CAC 40.
+Chaque transaction intègre des frais selon l’actif :
 
-Devises (Forex) : EUR/USD, GBP/USD, USD/JPY, USD/CHF.
+* 📈 **Actions** : courtage (0,50€ min + 0,25% plafonné à 15€) + spread + frais de change 🌍
+* 🪙 **Crypto** : \~1% + spreads élevés
+* 📑 **ETF** : TER journalier simulé + faible spread
+* 💱 **Forex** : spreads + frais overnight
+* 🏅 **Matières premières** : 1-2% + spreads
+* 📊 **Indices** : spreads + frais de financement
 
-📈 Simulation réaliste
+👉 **Tous les frais sont affichés en détail avant chaque ordre** !
 
-Les prix fluctuent automatiquement toutes les 3 secondes avec une volatilité spécifique à chaque type d’actif :
+---
 
-Crypto : très volatile (±3%).
+### 🛒 **Trading : Acheter / Vendre**
 
-Matières premières : modérément volatiles (±2%).
+* 2 modes d’achat :
 
-Forex : faiblement volatile (±0.5%).
+  * `Par quantité` 🔢
+  * `Par montant` 💵
+* Vérifications automatiques ✅ :
 
-Actions/ETF : moyennement volatiles (±1.5%).
+  * ❌ Fonds insuffisants
+  * ❌ Quantité trop faible (0 après frais)
+  * ❌ Vente sans assez d’unités détenues
 
-Indices : volatiles (±0.8%).
+---
 
-💶 Frais réalistes
+### 🧾 **Historique des transactions**
 
-Chaque transaction intègre différents frais selon l’actif :
+Chaque transaction affiche :
 
-Actions : courtage (0,50€ min + 0,25% plafonné à 15€) + spread 0,05-0,15% + frais de change si hors EUR.
+* Type : **Achat** ✅ / **Vente** ❌
+* Symbole et nom de l’actif
+* Quantité et prix
+* Frais détaillés (courtage, spread, change, gestion)
+* Montant net et brut
+* Date et heure 🕒
 
-Crypto : frais ~1% + spreads élevés.
+---
 
-ETF : frais réduits (TER simulé au prorata journalier).
+### 🎨 **UI Neumorphique**
 
-Forex : uniquement spreads + frais overnight sur achats.
+* Design **moderne et épuré** 🌟
+* Effets **ombre/relief** sur boutons et cartes
+* Couleurs **dégradées par type d’actif**
+* Navigation fluide avec **bottom bar** 📱
 
-Matières premières : frais 1-2% + spreads.
+---
 
-Indices : spread + financement.
+## 🛠️ **Stack technique**
 
-Tous les frais sont détaillés avant validation d’un ordre.
+* ⚛️ **React** (Hooks & State)
+* 🎨 **TailwindCSS**
+* 🖼️ **lucide-react** (icônes modernes)
+* 📜 **JavaScript ES6+**
 
-🛒 Système d’ordres
+---
 
-Possibilité d’acheter ou vendre des instruments financiers.
+## ⚡ **Installation & exécution**
 
-Deux modes d’achat :
-
-Par quantité : choisir le nombre d’unités/actions.
-
-Par montant : investir un montant fixe en euros (conversion automatique en quantités nettes après frais).
-
-Vérifications automatiques :
-
-Fonds insuffisants.
-
-Quantité trop faible (0 après frais).
-
-Tentative de vente sans assez de positions.
-
-🧾 Transactions
-
-Historique des transactions avec détails :
-
-Type (achat/vente).
-
-Quantité et prix.
-
-Montant brut et net.
-
-Frais détaillés (courtage, spread, change, gestion).
-
-Date et heure.
-
-🎨 UI Neumorphique
-
-Design moderne avec neumorphisme et dégradés colorés par type d’actif.
-
-Navigation fluide via bottom navigation bar.
-
-Boutons et cartes interactifs avec effets d’ombre et de surbrillance.
-
-🛠️ Stack technique
-
-React (hooks & state management).
-
-TailwindCSS (responsive & design).
-
-lucide-react (icônes modernes).
-
-JavaScript ES6+.
-
-📂 Installation & exécution
+```bash
 # Cloner le dépôt
 git clone https://github.com/ton-compte/stock-trading-simulator.git
 cd stock-trading-simulator
@@ -136,20 +130,28 @@ cd stock-trading-simulator
 # Installer les dépendances
 npm install
 
-# Lancer le serveur de dev
+# Lancer le serveur de développement
 npm run dev
+```
 
+Accéder à l’app : **[http://localhost:5173](http://localhost:5173)** 🌍
 
-Accéder à l’application sur : http://localhost:5173 (si Vite est utilisé).
+---
 
-✅ Fonctionnalités futures possibles
+## 🚧 **Idées d’améliorations futures**
 
-Authentification & sauvegarde du portefeuille.
+* 🔐 Authentification & sauvegarde du portefeuille
+* 📉 Graphiques dynamiques (courbes de prix)
+* 🏆 Classement entre utilisateurs (mode multi)
+* 🎯 Défis financiers (objectifs de trading)
 
-Graphiques avancés (courbes des prix & performances).
+---
 
-Classements entre utilisateurs (simulation multi-joueurs).
+## ⚠️ **Disclaimer**
 
-Mode “challenge” avec objectifs financiers.
+> Cette application est **uniquement une simulation éducative** 🎓
+> Elle **ne constitue pas un outil de trading réel** et ne doit pas être utilisée pour des décisions financières.
 
-👉 Ce projet est une simulation éducative et ne constitue pas un outil de trading réel.
+---
+
+💡 Veux-tu que je fasse aussi une **version entièrement en anglais** du README (pour un dépôt GitHub international) ou tu veux garder uniquement cette version française enrichie ?
