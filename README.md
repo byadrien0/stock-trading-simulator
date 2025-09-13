@@ -138,7 +138,3 @@ Accéder à l’app : **[http://localhost:5173](http://localhost:5173)** 🌍
 
 ```
 
----
-
-Veux-tu que je t’ajoute aussi un **aperçu visuel avec des captures d’écran** (section `## 📸 Screenshots`), que tu pourras compléter en ajoutant des images de l’app ?
-```
