@@ -1,4 +1,4 @@
-```
+
 # 📈 **Neumorphic Trading Simulator**  
 
 > _Une application de simulation de trading immersive et réaliste construite avec **React + TailwindCSS**_  
