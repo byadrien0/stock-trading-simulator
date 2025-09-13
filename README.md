@@ -107,7 +107,7 @@ Chaque transaction affiche :
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/ton-compte/stock-trading-simulator.git
+git clone https://github.com/byadrien0/stock-trading-simulator.git
 cd stock-trading-simulator
 
 # Installer les dépendances
