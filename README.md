@@ -1,4 +1,3 @@
-
 ```
 # 📈 **Neumorphic Trading Simulator**  
 
